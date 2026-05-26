@@ -1,0 +1,18 @@
+#Parcel
+- dev build 
+- local Server
+- HMR = Hot Module Replacemnt
+- Faster builds because of caching
+- Image optimization for you
+- Minification 
+- Bundling
+- Compress
+- Consistent Hashing 
+- Code Splitting 
+- Differential Bundling - to support on older browser
+- dDiagonestic
+- Error Handling
+- Can host in https
+- parcel documentation have to read or parcel.org
+- Tree shaking algorithm - remove unused codes
+- DIfferent Build for Dev and prod bundles

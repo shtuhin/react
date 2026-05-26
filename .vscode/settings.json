@@ -1,0 +1,6 @@
+{
+    "accessibility.signals.format": {
+        "sound": "always",
+        "announcement": "always"
+    }
+}

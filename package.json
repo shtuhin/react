@@ -1,0 +1,29 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "This is react test by Tuhin",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shtuhin/react.git"
+  },
+  "keywords": [],
+  "author": "SH Tuhin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shtuhin/react/issues"
+  },
+  "homepage": "https://github.com/shtuhin/react#readme",
+  "dependencies": {
+    "parcel": "^2.16.4",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
+  },
+  "browserlist": [
+    "Last 3 versions"
+  ]
+}
