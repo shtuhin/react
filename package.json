@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "This is react test by Tuhin",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html",
+    "start": "parcel foodbazar/index.html",
+    "build": "parcel build foodbazar/index.html",
     "test": "jest"
   },
   "repository": {
