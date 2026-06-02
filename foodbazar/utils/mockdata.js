@@ -1,0 +1,16 @@
+const  restaurantList = [
+        { name: "PizzaPurg", image:"https://plus.unsplash.com/premium_photo-1673439304183-8840bd0dc1bf?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", price: "400", cuisine: "Pizza, Italian, Fast Food", rating: "4.5", deliveryTime: "🕒 38 minutes" },
+        { name: "Burger King", image:"https://img.magnific.com/free-photo/classic-cheese-burger-with-beef-cutlet-vegetables-onions-isolated-white-background_123827-29709.jpg?semt=ais_hybrid&w=740&q=80", price: "200", cuisine: "Burgers, Fast Food", rating: "3.8", deliveryTime: "🕒 25 minutes" },
+        { name: "Sushi Master", image:"https://img.magnific.com/free-photo/sushi-roll-with-fish-and-vegetables-on-white-background_123827-29710.jpg?semt=ais_hybrid&w=740&q=80", price: "500", cuisine: "Sushi, Japanese", rating: "4.7", deliveryTime: "🕒 45 minutes" },
+        { name: "Taco Fiesta", image:"https://img.magnific.com/free-photo/tacos-with-beef-and-vegetables-isolated-white-background_123827-29711.jpg?semt=ais_hybrid&w=740&q=80", price: "150", cuisine: "Tacos, Mexican", rating: "4.3", deliveryTime: "🕒 30 minutes" },
+        { name: "Pasta Palace", image:"https://img.magnific.com/free-photo/spaghetti-with-tomato-sauce-and-basil-isolated-white-background_123827-29712.jpg?semt=ais_hybrid&w=740&q=80", price: "300", cuisine: "Pasta, Italian", rating: "3.7", deliveryTime: "🕒 40 minutes"},
+        { name: "Curry House", image:"https://img.magnific.com/free-photo/indian-curry-with-rice-isolated-white-background_123827-29713.jpg?semt=ais_hybrid&w=740&q=80", price: "250", cuisine: "Curry, Indian", rating: "4.4", deliveryTime: "🕒 35 minutes"},
+        { name: "BBQ Grill", image:"https://img.magnific.com/free-photo/barbecue-grilled-meat-with-sauce-isolated-white-background_123827-29715.jpg?semt=ais_hybrid&w=740&q=80", price: "200", cuisine: "BBQ, Grilled", rating: "4.5", deliveryTime: "🕒 50 minutes" },
+        { name: "Vegan Delight", image:"https://img.magnific.com/free-photo/vegan-buddha-bowl-with-quinoa-and-vegetables-isolated-white-background_123827-29716.jpg?semt=ais_hybrid&w=740&q=80", price: "150", cuisine: "Vegan, Healthy", rating: "4.7", deliveryTime: "🕒 30 minutes" },
+        { name: "Dessert Haven", image:"https://img.magnific.com/free-photo/assorted-desserts-on-white-background_123827-29717.jpg?semt=ais_hybrid&w=740&q=80", price: "300", cuisine: "Desserts, Sweets", rating: "4.8", deliveryTime: "🕒 20 minutes" },
+        { name: "Seafood Shack", image:"https://img.magnific.com/free-photo/grilled-fish-with-lemon-and-herbs-isolated-white-background_123827-29718.jpg?semt=ais_hybrid&w=740&q=80", price: "250", cuisine: "Seafood, Grilled", rating: "3.6", deliveryTime: "🕒 40 minutes" },
+        { name: "Salad Bowl", image:"https://img.magnific.com/free-photo/healthy-salad-with-vegetables-and-chicken-isolated-white-background_123827-29714.jpg?semt=ais_hybrid&w=740&q=80", price: "100", cuisine: "Salads, Healthy", rating: "4.8", deliveryTime: "🕒 20 minutes" }
+
+    ];
+
+    export default restaurantList;
