@@ -2,11 +2,37 @@ import SearchElement from "./SearchElement";
 import RestaurantCard from "./RestaurantCard";
 import restaurantList from "../utils/mockdata";
 import { useState } from "react";
+import { useEffect } from "react"; 
 
 const BodyComponent = () => {
     // State to manage filtered restaurants
     const [filteredRestaurants, setFilteredRestaurants] = useState(restaurantList);
     
+    // useEffect(() => {},[]);
+    // Use effect takes two parameters, first one is a callback function and second one is dependency array, which is optional.
+    // The callback function will be executed after the component is rendered and whenever any of the dependencies in the array change. If the dependency array is empty, the callback will only run once after the initial render.
+    useEffect(() => {
+        console.log("useEffect called - component mounted");
+        // After the components are rendered, callback function will be executed and it will log the message to the console. Since the dependency array is empty, this will only happen once when the component is first mounted.
+        fetchData();
+    },[]);
+
+    const fetchData = async () => {
+        const data = await fetch(
+            "../utils/mockdata.json"  //in future it will use for real api call, for now we are using local json file to fetch data.
+        );
+        console.log("Data fetched:", data);
+
+        const json = await data.json();
+        console.log("All data");
+        console.log(json);
+        setFilteredRestaurants(json);
+    };
+
+
+
+    console.log("BodyComponent rendered");
+    // in use effect body will be rendered fisrt then the useeffect callback function will be executed.
     // Handler to filter restaurants by rating 4.0+
     const handleFilterByRating = () => {
         const ratedRestaurants = restaurantList.filter((restaurant) => 
@@ -52,6 +78,10 @@ const BodyComponent = () => {
         console.log("All filters reset");
     };
 
+
+    if (filteredRestaurants.length === 0) {
+        return <h1>Loading...</h1>;
+    }
     return (
         <>
         <div className="Search">
