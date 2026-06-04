@@ -9,7 +9,7 @@ import Shimmer from "./Shimmer";
 const BodyComponent = () => {
     const [filteredRestaurants, setFilteredRestaurants] = useState([]);
     const [allRestaurants, setAllRestaurants] = useState([]);
-    
+    const [searchText, setSearchText] = useState("");
     
     useEffect(() => {
         console.log("useEffect called - component mounted");
@@ -79,7 +79,11 @@ const BodyComponent = () => {
     return (
         <>
         <div className="Search">
-            <SearchElement />
+            <SearchElement 
+            searchText={searchText} 
+            setSearchText={setSearchText} 
+            allRestaurants={allRestaurants} 
+            setFilteredRestaurants={setFilteredRestaurants} />
         </div>
 
         <div className="filter">

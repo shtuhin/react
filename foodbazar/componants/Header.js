@@ -2,7 +2,13 @@ import React, { useState } from "react";
 
 // Header Component
 const Header = () => {
-    const [btnNameReact, setBtnNameReact] = useState("Login");
+
+    const [loginBtn, setLoginBtn] = useState("Login");
+
+const clickHandler = () => {
+    setLoginBtn(loginBtn === "Login" ? "Logout" : "Login");
+};
+
     return (
         <>
          <div className="header">
@@ -17,21 +23,24 @@ const Header = () => {
                     <li>About Us</li>
                     <li>Service</li>
                     <li>Cart</li>
-                    <li 
-                        className= "login-btn" 
-                        onClick={() =>{
-                            setBtnNameReact(btnNameReact === "Login" ? "Logout" : "Login");
-                        }}>
-
-                            {btnNameReact}
-                            
+                    <li
+                    className= "login-btn"
+                    onClick = {() =>{
+                        clickHandler();
+                    }}
+                    >
+                    {loginBtn}
                     </li>
+
                 </ul>
             </div>
         </div>
                
         </>
     );
+
+
+
 }
 
 export default Header;
