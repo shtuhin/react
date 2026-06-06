@@ -42,8 +42,12 @@
     cursor: pointer;
     margin:10px;
 }
-
-.nav-items ul li:hover{
+.nav-items ul li a{
+    text-decoration: none;
+    color: #333;
+    transition: color 0.2s ease;
+}
+.nav-items ul li a:hover{
     background-color: #F6F4F0;
     /* color: #333;
      */
