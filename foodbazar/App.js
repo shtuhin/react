@@ -6,7 +6,13 @@ import ReactDOM from "react-dom/client";
 import Header from "./componants/Header";
 import BodyComponent from "./componants/BodyComponent";
 import RestaurantCard from "./componants/RestaurantCard";
+import {createBrowserRouter, RouterProvider,Outlet} from "react-router-dom";
 import Footer from "./componants/Footer";
+import Contact from "./componants/contact";
+import About from "./componants/About";
+import Error from "./componants/Error";
+import Service from "./componants/Service";
+import Cart from "./componants/Cart";
 /*
 Header
  - Logo
@@ -42,7 +48,9 @@ const AppLayout = () => {
     return <div className="app">
         <Header />
         {/* Header complete now its time for search and restaurant cards */}
-        <BodyComponent />
+        {/* if path is / then show BodyComponent */}
+        {/* if path is /contact then show Contact */}
+        <Outlet />
 
 
         {/* Footer */}
@@ -52,5 +60,49 @@ const AppLayout = () => {
     </div>
 }
 
+const appRouter = createBrowserRouter([
+    {
+        path: "/",
+        element: <AppLayout />,
+        children: [
+            {
+                path: "/",
+                element: <BodyComponent />,
+            },
+            {
+                path: "/contact",
+                element: <Contact />,
+                errorElement: <Error />
+            },
+            {
+                path: "/about",
+                element: <About />,
+                errorElement: <Error />
+            },
+            {
+                path: "/service",
+                element: <Service />,
+                errorElement: <Error />
+            },
+            {
+                path: "/cart",
+                element: <Cart />,
+                errorElement: <Error /> 
+            }
+
+
+        ],
+        errorElement: <Error />
+    }
+])
+
+
+// there are two types of routing
+// one is client side routing and other is server side routing
+// the difference between client side routing and server side routing is that in client side routing the routing is handled by the react router and in server side routing the routing is handled by the server and the server sends the html file to the client and the client renders the html file and shows it to the user but in client side routing the react router handles the routing and it renders the component based on the path and it does not send any html file to the client and it does not reload the page and it just updates the url and renders the component based on the path and this is called single page application (SPA) because we are not reloading the page and we are just updating the url and rendering the component based on the path.
+
+
+
+//Its time for children routes 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />);
+root.render(<RouterProvider router={appRouter} />);
